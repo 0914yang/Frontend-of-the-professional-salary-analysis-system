@@ -1,6 +1,6 @@
 <template>
-  <div id = "analysis">
-    <h1>analysis</h1>
+  <div id = "footer">
+    <p>Copyright © 2018</p>
   </div>
 </template>
 
@@ -12,11 +12,11 @@ export default {
 </script>
 
 <style>
-#analysis {
+#footer {
 	width: 100%;
-	background: #444;
+	background: #fff;
 	text-align: center;
-	height: 900px;
-	line-height: 900px;
+	height: 50px;
+	line-height: 50px;
 }
 </style>

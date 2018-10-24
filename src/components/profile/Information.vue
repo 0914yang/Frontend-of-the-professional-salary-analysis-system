@@ -1,6 +1,6 @@
 <template>
-  <div id = "analysis">
-    <h1>analysis</h1>
+  <div id = "information">
+    <h1>information</h1>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style>
-#analysis {
+#information {
 	width: 100%;
 	background: #444;
 	text-align: center;

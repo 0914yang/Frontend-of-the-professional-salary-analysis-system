@@ -1,8 +1,7 @@
 <template>
-  <div id = "index">
+  <div id = "profile">
     <app-nav></app-nav>
-    <app-search></app-search>
-    <app-city></app-city>
+    <app-information></app-information>
     <app-footer></app-footer>
   </div>
 </template>
@@ -10,15 +9,13 @@
 <script>
 import Nav from '../components/Nav.vue'
 import Footer from '../components/Footer.vue'
-import Search from '../components/index/Search.vue'
-import City from '../components/index/City.vue'
+import Information from '../components/profile/Information.vue'
 
 export default {
   components: {
     'app-nav': Nav,
     'app-footer': Footer,
-    'app-search': Search,
-    'app-city': City
+    'app-information': Information
   }
 };
 </script>
