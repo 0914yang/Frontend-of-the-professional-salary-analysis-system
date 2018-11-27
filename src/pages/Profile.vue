@@ -2,7 +2,6 @@
   <div id = "profile">
     <app-nav></app-nav>
     <app-information></app-information>
-    <app-footer></app-footer>
   </div>
 </template>
 

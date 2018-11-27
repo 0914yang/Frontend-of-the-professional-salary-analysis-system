@@ -6,8 +6,8 @@
     <el-row style="height: 35%;" type="flex" justify="center">
       <el-col :span="24"><div class="grid-content"></div></el-col>
     </el-row>
-    <el-row style="height: 80%;" type="flex" justify="center">
-      <el-col :span="24"><div class="grid-content"></div></el-col>
+    <el-row style="height: 120%;" type="flex" justify="center">
+      <el-col :span="24"><app-city class="grid-content"></app-city></el-col>
     </el-row>
   </div>
 </template>
