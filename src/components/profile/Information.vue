@@ -1,6 +1,6 @@
 <template>
-  <div id = "information">
-    <h1>information</h1>
+  <div class="information">
+
   </div>
 </template>
 
@@ -11,12 +11,6 @@ export default {
 };
 </script>
 
-<style>
-#information {
-	width: 100%;
-	background: #444;
-	text-align: center;
-	height: 900px;
-	line-height: 900px;
-}
+<style scoped>
+
 </style>

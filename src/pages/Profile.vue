@@ -8,18 +8,16 @@
 
 <script>
 import Nav from '../components/Nav.vue'
-import Footer from '../components/Footer.vue'
 import Information from '../components/profile/Information.vue'
 
 export default {
   components: {
     'app-nav': Nav,
-    'app-footer': Footer,
     'app-information': Information
   }
 };
 </script>
 
-<style>
+<style scoped>
 
 </style>
