@@ -19,13 +19,13 @@
     		</el-row>
     		  <el-row style="height: 50%;" :type="flex" justify="left">
     		  	<el-col :span="4"><div class="grid-content">
-        			<p>姓名</p>
+        			<p class="a">姓名</p>
       			</div></el-col>
      			<el-col :span="4"><div class="grid-content">
         			<el-input size="small" v-model="input1" placeholder=""></el-input>
       			</div></el-col>
       			<el-col :span="4"><div class="grid-content">
-        			<p>居住地</p>
+        			<p class="a">居住地</p>
       			</div></el-col>
       			<el-col :span="2"><div class="grid-content">
         			<el-input size="small" v-model="input2" placeholder="省份"></el-input>
@@ -33,18 +33,21 @@
       			<el-col :span="2"><div class="grid-content">
         			<el-input size="small" v-model="input3" placeholder="城市"></el-input>
       			</div></el-col>
+            <el-col :span="8"><div class="grid-content2">
+              <img border="0" src="../../images/head.jpg" alt="Pulpit rock" width="200" height="200">
+            </div></el-col>
     		</el-row>
     		</el-row>
     		  <el-row style="height: 50%;" :type="flex" justify="left">
     		  	<el-col :span="4"><div class="grid-content">
-        			<p>性别</p>
+        			<p class="a">性别</p>
       			</div></el-col>
      			<el-col :span="4"><div class="grid-content">
         			<el-radio v-model="radio" label="1">男</el-radio>
   					<el-radio v-model="radio" label="2">女</el-radio>
       			</div></el-col>
       			<el-col :span="4"><div class="grid-content">
-        			<p>出生日期</p>
+        			<p class="a">出生日期</p>
       			</div></el-col>
       			<el-col :span="4"><div class="grid-content">
         			<el-date-picker v-model="value1" type="date" placeholder="选择日期"></el-date-picker>
@@ -53,7 +56,7 @@
     	    </el-row>
     		  <el-row style="height: 50%;" :type="flex" justify="left">
     		  	<el-col :span="4"><div class="grid-content">
-        			<p>最高学历</p>
+        			<p class="a">最高学历</p>
       			</div></el-col>
      			<el-col :span="4"><div class="grid-content">
         			  <el-select v-model="value" placeholder="请选择">
@@ -74,22 +77,20 @@
     	    </el-row>
     		  <el-row style="height: 50%;" :type="flex" justify="left">
     		  	<el-col :span="4"><div class="grid-content">
-        			<p>手机号码</p>
+        			<p class="a">手机号码</p>
       			</div></el-col>
      			<el-col :span="4"><div class="grid-content">
         			<el-input size="small" v-model="input4" placeholder=""></el-input>
       			</div></el-col>
       			<el-col :span="4"><div class="grid-content">
-        			<p>邮箱地址</p>
+        			<p class="a">邮箱地址</p>
       			</div></el-col>
       			<el-col :span="4"><div class="grid-content">
         			<el-input size="small" v-model="input5" placeholder=""></el-input>
       			</div></el-col>
-    		</el-row>
-    		<el-row style="height: 50%;" type="flex" justify="left">
-     			<el-col :span="24"><div class="grid-content">
-        			 <el-button>保存</el-button>
-      			</div></el-col>
+            <el-col :span="8"><div class="grid-content">
+              <p class="a">头像</p>
+            </div></el-col>
     		</el-row>
   		</el-main>
    	</el-container>
@@ -102,12 +103,12 @@ export default {
   name:"app",
   data() {
         return {
-          input1: '',
-          input2: '',
-          input3: '',
-          input4: '',
-          input5: '',
-          radio: '1',
+          input1: '马冬梅',
+          input2: '四川',
+          input3: '成都',
+          input4: '1234567890',
+          input5: '1234567890@qq.com',
+          radio: '2',
           options: [{
           value: '选项1',
           label: '高中'
@@ -121,7 +122,7 @@ export default {
           value: '选项4',
           label: '博士'
         }],
-        value: ''
+        value1: '1998-01-12'
         }
   }  
 };
@@ -176,5 +177,9 @@ li a {
 li a:hover {
     background-color: #555;
     color: white;
+}
+
+.a {
+  margin-top: 10px;
 }
 </style>
