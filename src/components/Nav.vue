@@ -6,8 +6,8 @@
         <li><a class="active" href="/profile">个人中心</a></li>
       </ul>
     <div class = "butt">
-      <el-button>登录</el-button>
-      <el-button>注册</el-button></div>
+      <i class="el-icon-bell"> 马冬梅 </i>
+      <el-button>登出</el-button>
     </div>    
   </div>
 </template>
