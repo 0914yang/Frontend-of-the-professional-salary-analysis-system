@@ -55,7 +55,7 @@ export default {
   },
   methods: {
   	jump: function(destination) {
-      this.$router.push(destination);
+      this.$router.push("/singlecity/#" + destination);
     }
   }
 };

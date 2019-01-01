@@ -2,12 +2,11 @@
   <div class="nav">
     <h1 class = "title">招聘数据分析系统</h1>
       <ul>
-        <li><a class="active" href="/">首页</a></li>
-        <li><a class="active" href="/profile">个人中心</a></li>
+        <li><a class="active" @click="jump('/')">首页</a></li>
+        <li><a class="active" @click="jump('/profile')">个人中心</a></li>
       </ul>
     <div class = "butt">
       <i class="el-icon-bell"> 马冬梅 </i>
-      <el-button>登出</el-button>
     </div>    
   </div>
 </template>
@@ -15,7 +14,11 @@
 <script>
 
 export default {
-  
+  methods: {
+    jump: function(destination) {
+      this.$router.push(destination);
+    }
+  }
 };
 </script>
 
@@ -65,8 +68,16 @@ li a {
     text-decoration: none;
 }
 
-
 li a:hover {
     background-color: #111;
+}
+
+.el-icon-bell {
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.active {
+  cursor: pointer;
 }
 </style>

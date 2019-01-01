@@ -1,23 +1,27 @@
 <template>
   <div id = "profile">
-    <el-row style="height: 15%;" type="flex" justify="center">
+    <el-row style="height: 100px;" type="flex" justify="center">
       <el-col :span="24"><app-nav class="grid-content"></app-nav></el-col>
     </el-row>
     <el-row style="height: 90%;" type="flex" justify="center">
       <el-col :span="24"><app-information class="grid-content"></app-information></el-col>
     </el-row>
-  </div>
+    <el-row style="height: 100px;" type="flex" justify="center">
+      <el-col :span="24"><app-footer class="grid"></app-footer></el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
 import Nav from '../components/Nav.vue'
 import Information from '../components/profile/Information.vue'
+import Footer from '../components/Footer.vue'
 
 export default {
   components: {
     'app-nav': Nav,
-    'app-information': Information
+    'app-information': Information,
+    'app-footer': Footer
   }
 };
 </script>

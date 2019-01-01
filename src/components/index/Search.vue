@@ -1,5 +1,5 @@
 <template>
-  <div class="search":style="{backgroundImage: 'url(' + imgfirst + ')' }">
+  <div class="search" :style="{backgroundImage: 'url(' + imgfirst + ')' }">
     <el-row style="height: 30%;" type="flex" justify="center">
       <el-col :span="24"><div class="grid-content">
         <h2 class="t2">搜索你想要的职位</h2>
@@ -21,11 +21,10 @@
       </div></el-col>
     </el-row>
   </div>
-
 </template>
 
 <script>
-
+import imgfirst from '../../images/first.jpg'
 export default {
   name:"app",
   data() {
