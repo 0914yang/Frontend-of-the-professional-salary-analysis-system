@@ -1,11 +1,11 @@
 <template>
-  <div class="profile">
+  <div class="register">
     <el-row style="height: 100px;" type="flex" justify="center">
       <el-col :span="24"><app-nav class="grid-content"></app-nav></el-col>
     </el-row>
     <el-row style="height: 80%;" type="flex" justify="center">
       <el-col :span="24"><div class="grid">
-        <h1>Single City</h1>
+        <h1>Register</h1>
       </div></el-col>
     </el-row>
     <el-row style="height: 100px;" type="flex" justify="center">
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style scoped>
-.profile {
+.register {
   width: 100%;
   height: 600px;
 }

@@ -6,7 +6,8 @@
         <li><a class="active" @click="jump('/profile')">个人中心</a></li>
       </ul>
     <div class = "butt">
-      <i class="el-icon-bell"> 马冬梅 </i>
+      <el-button type="info" class="elb" @click="jump('/login')">登录</el-button>
+      <el-button type="info" class="elb" @click="jump('/register')">注册</el-button>
     </div>    
   </div>
 </template>
@@ -72,7 +73,7 @@ li a:hover {
     background-color: #111;
 }
 
-.el-icon-bell {
+.elb {
   cursor: pointer;
   margin-top: 15px;
 }

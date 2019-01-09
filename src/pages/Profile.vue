@@ -1,9 +1,9 @@
 <template>
-  <div id = "profile">
+  <div class="profile">
     <el-row style="height: 100px;" type="flex" justify="center">
       <el-col :span="24"><app-nav class="grid-content"></app-nav></el-col>
     </el-row>
-    <el-row style="height: 90%;" type="flex" justify="center">
+    <el-row style="height: 100%;" type="flex" justify="center">
       <el-col :span="24"><app-information class="grid-content"></app-information></el-col>
     </el-row>
     <el-row style="height: 100px;" type="flex" justify="center">
