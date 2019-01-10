@@ -12,7 +12,7 @@
     </el-row>
     <el-row style="height: 10%;" type="flex" justify="center">
       <el-col :span="12"><div class="grid-content">
-        <el-button type="primary" icon="el-icon-search">搜索</el-button>
+        <el-button type="primary" icon="el-icon-search" @click="search">搜索</el-button>
       </div></el-col>
     </el-row>     
     <el-row style="height: 30%;" type="flex" justify="center">
@@ -26,12 +26,24 @@
 <script>
 import imgfirst from '../../images/first.jpg'
 export default {
-  name:"app",
   data() {
-        return {
-          input: '',
-          imgfirst,
-        }
+    return {
+      input: '',
+      imgfirst,
+    }
+  },
+  methods: {
+    search: function(){
+      if(this.input === "") {
+        alert("请先输入你要搜索的职位");
+      }
+      else {
+        this.jump(this.input);
+      }
+    },
+    jump: function(destination) {
+      this.$router.push("/searchresults/#" + destination);
+    }
   }  
 };
 </script>

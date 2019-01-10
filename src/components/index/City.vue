@@ -9,19 +9,19 @@
     <el-row style="height: 80%;" type="flex" justify="center">
       <el-col :span="24"><div class="grid-content">
         <el-row style="height: 33%;" :gutter="10" type="flex" justify="center">
-          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgone + ')'}" @click="jump('/beijing')">北京</div></el-col>
-          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgtwo + ')'}" @click="jump('/chengdu')">成都</div></el-col>
-          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgthree + ')'}" @click="jump('/chongqing')">重庆</div></el-col>
+          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgone + ')'}" @click="jump('beijing')">北京</div></el-col>
+          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgtwo + ')'}" @click="jump('chengdu')">成都</div></el-col>
+          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgthree + ')'}" @click="jump('chongqing')">重庆</div></el-col>
         </el-row>
         <el-row style="height: 33%;" :gutter="10" type="flex" justify="center">
-          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgfour + ')'}" @click="jump('/guangzhou')">广州</div></el-col>
-          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgfive + ')'}" @click="jump('/nanjing')">南京</div></el-col>
-          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgsix + ')'}" @click="jump('/shanghai')">上海</div></el-col>
+          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgfour + ')'}" @click="jump('guangzhou')">广州</div></el-col>
+          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgfive + ')'}" @click="jump('nanjing')">南京</div></el-col>
+          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgsix + ')'}" @click="jump('shanghai')">上海</div></el-col>
         </el-row>
         <el-row style="height: 33%;" :gutter="10" type="flex" justify="center">
-          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgseven + ')'}" @click="jump('/shenzhen')">深圳</div></el-col>
-          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgeight + ')'}" @click="jump('/wuhan')">武汉</div></el-col>
-          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgnight + ')'}" @click="jump('/xiamen')">厦门</div></el-col>
+          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgseven + ')'}" @click="jump('shenzhen')">深圳</div></el-col>
+          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgeight + ')'}" @click="jump('wuhan')">武汉</div></el-col>
+          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgnight + ')'}" @click="jump('xiamen')">厦门</div></el-col>
         </el-row>
       </div></el-col>
     </el-row>

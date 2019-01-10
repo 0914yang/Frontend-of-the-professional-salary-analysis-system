@@ -1,7 +1,7 @@
 <template>
   <div class="register">
     <el-row style="height: 100px;" type="flex" justify="center">
-      <el-col :span="24"><app-nav class="grid-content"></app-nav></el-col>
+      <el-col :span="24"><app-nav class="ggrid"></app-nav></el-col>
     </el-row>
     <el-row style="height: 30%;" type="flex" justify="center">
       <el-col :span="24"><div class="grid-content"></div></el-col>
@@ -118,5 +118,11 @@ export default {
   border: solid 2px #cecece;
   height: 100%;
   padding: 20px;
+}
+
+.ggrid {
+  border-radius: 10px;
+  border: solid 2px #cecece;
+  height: 100%;
 }
 </style>

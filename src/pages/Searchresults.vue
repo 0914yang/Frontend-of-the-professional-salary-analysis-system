@@ -1,11 +1,16 @@
 <template>
-  <div class="singlecity">
+  <div class="searchresults">
     <el-row style="height: 100px;" type="flex" justify="center">
       <el-col :span="24"><app-nav class="grid-content"></app-nav></el-col>
     </el-row>
-    <el-row style="height: 80%;" type="flex" justify="center">
-      <el-col :span="24"><div class="grid">
-        <h1>Single City</h1>
+    <el-row style="height: 95%;" type="flex" justify="center">
+      <el-col :span="6"><div class="grid-content">
+        <h3>热门搜索职业</h3>
+      </div></el-col>
+      <el-col :span="18"><div class="grid">
+        <el-card class="card">
+          <p>{{ searchitem }}</p>
+        </el-card>
       </div></el-col>
     </el-row>
     <el-row style="height: 100px;" type="flex" justify="center">
@@ -22,12 +27,22 @@ export default {
   components: {
     'app-nav': Nav,
     'app-footer': Footer
+  },
+  mounted: function() {
+    var hash = decodeURIComponent(window.location.hash);
+    hash = hash.substring(1);
+    this.searchitem = hash;
+  },
+  data() {
+    return {
+      searchitem: ""
+    }
   }
 };
 </script>
 
 <style scoped>
-.singlecity {
+.searchresults {
   width: 100%;
   height: 600px;
 }
@@ -36,5 +51,15 @@ export default {
   border-radius: 10px;
   border: solid 1px #cecece;
   height: 100%;
+}
+
+.grid {
+  height: 100%;
+}
+
+.card {
+  cursor: pointer;
+  border-radius: 10px;
+  border: solid 1px #cecece;
 }
 </style>

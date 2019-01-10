@@ -6,6 +6,7 @@ import Register from '@/pages/Register.vue'
 import Jobsalaryanalysis from '@/pages/Jobsalaryanalysis.vue'
 import Profile from '@/pages/Profile.vue'
 import Singlecity from '@/pages/Singlecity.vue'
+import Searchresults from '@/pages/Searchresults.vue'
 
 Vue.use(Router)
 
@@ -41,6 +42,11 @@ export default new Router({
       path: '/singlecity',
       name: 'Singlecity',
       component: Singlecity
+    },
+    {
+      path: '/searchresults',
+      name: 'Searchresults',
+      component: Searchresults
     }
   ]
 })
