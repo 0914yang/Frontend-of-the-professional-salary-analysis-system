@@ -5,7 +5,7 @@
     </el-row>
     <el-row style="height: 80%;" type="flex" justify="center">
       <el-col :span="24"><div class="grid">
-        <h1>Single City</h1>
+        <h1>This is {{ cityName }} !</h1>
       </div></el-col>
     </el-row>
     <el-row style="height: 100px;" type="flex" justify="center">
@@ -22,7 +22,17 @@ export default {
   components: {
     'app-nav': Nav,
     'app-footer': Footer
-  }
+  },
+  data() {
+    return {
+      cityName: ""
+    }
+  },
+  mounted: function() {
+    var hash = decodeURIComponent(window.location.hash);
+    hash = hash.substring(1);
+    this.cityName = hash;
+  },
 };
 </script>
 

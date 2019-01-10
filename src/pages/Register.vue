@@ -30,6 +30,12 @@
     <el-row style="height: 100px;" type="flex" justify="center">
       <el-col :span="24"><app-footer class="grid-content"></app-footer></el-col>
     </el-row>
+    <el-dialog title="提示" :visible.sync="centerDialogVisible" width="30%" center>
+     <span>恭喜你注册成功！</span>
+     <span slot="footer" class="dialog-footer">
+      <el-button type="primary" @click="submitre">确 定</el-button>
+     </span>
+    </el-dialog>
   </div>
 </template>
 
@@ -85,19 +91,24 @@ export default {
           age: [
             { validator: checkAge, trigger: 'blur' }
           ]
-        }
+        },
+        centerDialogVisible: false
       };
     },
     methods: {
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            alert('submit!');
+            this.centerDialogVisible = true;
           } else {
             console.log('error submit!!');
             return false;
           }
         });
+      },
+      submitre() {
+        this.centerDialogVisible = false;
+        this.$router.push('/login');
       }
     }
 };

@@ -1,6 +1,7 @@
 <template>
   <div class="footer">
     <p>@copyright 2018-</p>
+    <p>UESTC-综合课程设计</p>
   </div>
 </template>
 
