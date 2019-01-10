@@ -4,12 +4,12 @@
       <el-col :span="6"><div class="grid-content ll">
         <el-row style="height: 40%;" type="flex" justify="center">
           <el-col :span="24"><div class="grid-content">
-            <img border="0" src="../../images/head.jpg" alt="Pulpit rock" width="200" height="200"/>
+            <img v-if="imgseen" border="0" src="../../images/head.jpg" alt="Pulpit rock" width="200" height="200"/>
           </div></el-col>
         </el-row>
         <el-row style="height: 8%" type="flex" justify="center">
           <el-col :span="24"><div class="grid-content">
-            <el-button type="primary">修改头像</el-button>
+            <el-button v-if="imgseen" type="primary">修改头像</el-button>
           </div></el-col>
         </el-row>
         <el-row style="height: 8%" type="flex" justify="center">
@@ -115,6 +115,7 @@
         </el-row>
       </div></el-col>
       <el-col :span="18" v-if="noseen"><div class="grid-content rr"></div></el-col>
+      <el-col :span="18" v-if="nologin"><div class="grid-content rr" style="line-height: 400px;">登录后可查看</div></el-col>
     </el-row>
   </div>
 </template>
@@ -129,8 +130,24 @@ export default {
       noActive: false,
       sisActive: false,
       snoActive: true,
-      seen: true,
-      noseen: false
+      seen: false,
+      noseen: false,
+      nologin: true,
+      imgseen: false
+    }
+  },
+  mounted: function() {
+    if(!this.$store.state.isLogin) {
+      this.seen = false;
+      this.noseen = false;
+      this.nologin = true;
+      this.imgseen = false;
+    }
+    else {
+      this.seen = true;
+      this.noseen = false;
+      this.nologin = false;
+      this.imgseen = true;
     }
   },
   methods: {
@@ -141,14 +158,23 @@ export default {
       this.snoActive = false;
       this.seen = false;
       this.noseen = true;
+      this.nologin = false;
     },
     changeToG: function() {
       this.isActive = true;
       this.noActive = false;
       this.sisActive = false;
       this.snoActive = true;
-      this.seen = true;
-      this.noseen = false;
+      if(!this.$store.state.isLogin) {
+        this.seen = false;
+        this.noseen = false;
+        this.nologin = true;
+      }
+      else {
+        this.seen = true;
+        this.noseen = false;
+        this.nologin = false;
+      }
     }
   } 
 };

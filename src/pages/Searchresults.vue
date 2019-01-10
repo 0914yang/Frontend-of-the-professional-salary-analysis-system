@@ -7,7 +7,7 @@
       <el-col :span="6"><div class="grid-content">
         <h3>热门搜索职业</h3>
       </div></el-col>
-      <el-col :span="18"><div class="grid">
+      <el-col :span="18"><div class="grid" @click="jump">
         <el-card class="card">
           <p>{{ searchitem }}</p>
         </el-card>
@@ -36,6 +36,11 @@ export default {
   data() {
     return {
       searchitem: ""
+    }
+  },
+  methods: {
+    jump: function() {
+      this.$router.push("/singlecareer/#" + this.searchitem);
     }
   }
 };

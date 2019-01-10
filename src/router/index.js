@@ -7,6 +7,7 @@ import Jobsalaryanalysis from '@/pages/Jobsalaryanalysis.vue'
 import Profile from '@/pages/Profile.vue'
 import Singlecity from '@/pages/Singlecity.vue'
 import Searchresults from '@/pages/Searchresults.vue'
+import Singlecareer from '@/pages/Singlecareer.vue'
 
 Vue.use(Router)
 
@@ -47,6 +48,11 @@ export default new Router({
       path: '/searchresults',
       name: 'Searchresults',
       component: Searchresults
+    },
+    {
+      path: '/singlecareer',
+      name: 'Singlecareer',
+      component: Singlecareer
     }
   ]
 })

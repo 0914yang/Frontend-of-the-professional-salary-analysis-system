@@ -73,7 +73,8 @@ export default {
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            alert('submit!');
+            this.$store.commit('loginChange');
+            this.$router.push('/profile');
           } else {
             console.log('error submit!!');
             return false;

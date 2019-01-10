@@ -5,19 +5,45 @@
         <li><a class="active" @click="jump('/')">首页</a></li>
         <li><a class="active" @click="jump('/profile')">个人中心</a></li>
       </ul>
-    <div class = "butt">
+    <div class = "butt" v-if="loginin">
       <el-button type="info" class="elb" @click="jump('/login')">登录</el-button>
       <el-button type="info" class="elb" @click="jump('/register')">注册</el-button>
-    </div>    
+    </div>
+    <div class="butt" v-if="loginout">
+      <i class="el-icon-bell"> 马冬梅 </i>
+      <el-button type="info" class="elb" @click="lo">登出</el-button>
+    </div>   
   </div>
 </template>
 
 <script>
 
 export default {
+  data(){
+    return {
+      loginin: true,
+      loginout: false
+    }
+  },
   methods: {
     jump: function(destination) {
       this.$router.push(destination);
+    },
+    lo: function() {
+      this.$store.commit('loginChange');
+      this.$router.push('/');
+      this.loginin = true;
+      this.loginout = false;
+    }
+  },
+  mounted: function() {
+    if(!this.$store.state.isLogin) {
+      this.loginin = true;
+      this.loginout = false;
+    }
+    else {
+      this.loginin = false;
+      this.loginout = true;
     }
   }
 };
