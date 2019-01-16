@@ -7,7 +7,7 @@
 <script>
 
 export default {
-  
+
 };
 </script>
 
@@ -16,7 +16,7 @@ export default {
 	width: 100%;
 	background: #444;
 	text-align: center;
-	height: 900px;
+	height: 901px;
 	line-height: 900px;
 }
 </style>
