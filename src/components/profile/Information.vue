@@ -123,6 +123,7 @@
 <script>
 
 export default {
+
   name:"app",
   data() {
     return {
@@ -204,5 +205,18 @@ export default {
   height: 12%;
   background-color: #FFF;
   cursor: pointer;
+=======
+
+};
+</script>
+
+<style>
+#information {
+	width: 100%;
+	background: #444;
+	text-align: center;
+	height: 901px;
+	line-height: 900px;
+
 }
 </style>

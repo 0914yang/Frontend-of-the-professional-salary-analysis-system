@@ -24,7 +24,11 @@
 </template>
 
 <script>
+
 import imgfirst from '../../images/first.jpg'
+=======
+
+
 export default {
   data() {
     return {
