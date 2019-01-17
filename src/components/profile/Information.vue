@@ -32,7 +32,7 @@
       <el-col :span="18" v-if="seen"><div class="grid-content rr">
         <el-row style="height: 12%;" type="flex" justify="center">
           <el-col :span="24"><div class="grid-content">
-              <h3>基本信息</h3>
+              <h3>基本的信息</h3>
             </div></el-col>
         </el-row>
         <el-row style="height: 12%;" type="flex" justify="center">
@@ -177,7 +177,7 @@ export default {
         this.nologin = false;
       }
     }
-  } 
+  }
 };
 </script>
 
