@@ -1,13 +1,12 @@
 <template>
-  <div class="index">
+  <div class="singlecity">
     <el-row style="height: 100px;" type="flex" justify="center">
       <el-col :span="24"><app-nav class="grid-content"></app-nav></el-col>
     </el-row>
-    <el-row style="height: 66%;" type="flex" justify="center">
-      <el-col :span="24"><app-search class="grid"></app-search></el-col>
-    </el-row>
-    <el-row style="height: 120%;" type="flex" justify="center">
-      <el-col :span="24"><app-city class="grid"></app-city></el-col>
+    <el-row style="height: 80%;" type="flex" justify="center">
+      <el-col :span="24"><div class="grid">
+        <h1>This is {{ cityName }} !</h1>
+      </div></el-col>
     </el-row>
     <el-row style="height: 100px;" type="flex" justify="center">
       <el-col :span="24"><app-footer class="grid"></app-footer></el-col>
@@ -17,33 +16,35 @@
 
 <script>
 import Nav from '../components/Nav.vue'
-import Search from '../components/index/Search.vue'
-import City from '../components/index/City.vue'
 import Footer from '../components/Footer.vue'
 
 export default {
   components: {
     'app-nav': Nav,
-    'app-search': Search,
-    'app-city': City,
     'app-footer': Footer
-  }
+  },
+  data() {
+    return {
+      cityName: ""
+    }
+  },
+  mounted: function() {
+    var hash = decodeURIComponent(window.location.hash);
+    hash = hash.substring(1);
+    this.cityName = hash;
+  },
 };
 </script>
 
 <style scoped>
-.index {
+.singlecity {
   width: 100%;
-  height: 100%;
+  height: 600px;
 }
 
 .grid-content {
   border-radius: 10px;
   border: solid 1px #cecece;
-  height: 100%;
-}
-
-.grid {
   height: 100%;
 }
 </style>

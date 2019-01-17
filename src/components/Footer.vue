@@ -1,6 +1,7 @@
 <template>
-  <div id = "footer">
-    <p>Copyright © 2018</p>
+  <div class="footer">
+    <p>@copyright 2018-</p>
+    <p>UESTC-综合课程设计</p>
   </div>
 </template>
 
@@ -11,12 +12,10 @@ export default {
 };
 </script>
 
-<style>
-#footer {
-	width: 100%;
-	background: #fff;
-	text-align: center;
-	height: 50px;
-	line-height: 50px;
+<style scoped>
+.footer {
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 </style>

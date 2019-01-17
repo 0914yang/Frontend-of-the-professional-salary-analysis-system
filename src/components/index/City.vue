@@ -1,83 +1,89 @@
 <template>
-  <div id = "city">
-  	<div id = "discribe">
-  		<h1>各大城市就业分析表单</h1>
-  		<p>快速了解国内各个城市对不同岗位的需求情况和薪资水平，准确地为你的就业规划提供有效的第一手信息</p>
-  	</div>
-  	<div id = "cities">
-  		<div class = "single" v-for = "city in cities">
-  			<el-card :body-style="{ padding: '0px' }">
-          <div class = "header" style="padding: 14px;">
-          <span>{{ city.name }}</span>
-          </div>
-  			  <img :src = "city.src" class="image" @click = "toggle(city.router)">
-  		    </el-card>
-  		</div>
-  	</div>
+  <div class="city">
+  	<el-row style="height: 20%;" type="flex" justify="center">
+      <el-col :span="24"><div class="grid-content">
+        <h3>各大城市就业分析表单</h3>
+        <p>快速了解国内各个城市对不同的岗位的需求情况和薪资水平，准确地为你的就业规划提供有效的第一手信息</p>
+      </div></el-col>
+    </el-row>
+    <el-row style="height: 80%;" type="flex" justify="center">
+      <el-col :span="24"><div class="grid-content">
+        <el-row style="height: 33%;" :gutter="10" type="flex" justify="center">
+          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgone + ')'}" @click="jump('北京')">北京</div></el-col>
+          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgtwo + ')'}" @click="jump('成都')">成都</div></el-col>
+          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgthree + ')'}" @click="jump('chongqing')">重庆</div></el-col>
+        </el-row>
+        <el-row style="height: 33%;" :gutter="10" type="flex" justify="center">
+          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgfour + ')'}" @click="jump('广州')">广州</div></el-col>
+          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgfive + ')'}" @click="jump('南京')">南京</div></el-col>
+          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgsix + ')'}" @click="jump('上海')">上海</div></el-col>
+        </el-row>
+        <el-row style="height: 33%;" :gutter="10" type="flex" justify="center">
+          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgseven + ')'}" @click="jump('深圳')">深圳</div></el-col>
+          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgeight + ')'}" @click="jump('武汉')">武汉</div></el-col>
+          <el-col :span="5"><div class="grid img" :style="{backgroundImage:'url(' + imgnight + ')'}" @click="jump('厦门')">厦门</div></el-col>
+        </el-row>
+      </div></el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
+import imgone from '../../images/beijing.jpg'
+import imgtwo from '../../images/chengdu.jpg'
+import imgthree from '../../images/chongqing.jpg'
+import imgfour from '../../images/guangzhou.jpg'
+import imgfive from '../../images/nanjing.jpg'
+import imgsix from '../../images/shanghai.jpg'
+import imgseven from '../../images/shenzhen.jpg'
+import imgeight from '../../images/wuhan.jpg'
+import imgnight from '../../images/xiamen.jpg'
+
 export default {
   data() {
   	return {
-  		cities: [
-  		  {name: '北京', src: require('../../images/beijing.jpg'), router: '/beijing'},
-        {name: '上海', src: require('../../images/shanghai.jpg'), router: '/shanghai'},
-        {name: '成都', src: require('../../images/chengdu.jpg'), router: '/chengdu'},
-        {name: '广州', src: require('../../images/guangzhou.jpg'), router: '/guangzhou'},
-        {name: '深圳', src: require('../../images/shenzhen.jpg'), router: '/shenzhen'},
-        {name: '重庆', src: require('../../images/chongqing.jpg'), router: '/chongqing'},
-        {name: '厦门', src: require('../../images/xiamen.jpg'), router: 'xiamen'},
-        {name: '武汉', src: require('../../images/wuhan.jpg'), router: '/wuhan'},
-        {name: '南京', src: require('../../images/nanjing.jpg'), router: '/nanjing'}
-  		]
+  		imgone,
+      imgtwo,
+      imgthree,
+      imgfour,
+      imgfive,
+      imgsix,
+      imgseven,
+      imgeight,
+      imgnight
   	}
   },
   methods: {
-  	toggle(destination) {
-  		this.$router.push(destination);
-  	}
+  	jump: function(destination) {
+      this.$router.push("/singlecity/#" + destination);
+    }
   }
 };
 </script>
 
-<style>
-#discribe {
-	width: 100%;
-	text-align: center;
-	height: 200px;
-	line-height: 100px;
+<style scoped>
+.city {
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 
-#cities {
-	margin: auto;
-	width: 1200px;
-	height: 1050px;
-	border: 1px solid #F0F1F1;
-	-webkit-box-shadow:0px 3px 3px #c8c8c8 ;
-    -moz-box-shadow:0px 3px 3px #c8c8c8 ;
-    box-shadow:0px 3px 3px #c8c8c8 ;
+.grid-content {
+  height: 100%;
 }
 
-.single {
-	width: 400px;
-	float: left;
+.grid {
+  border-radius: 10px;
+  border: solid 1px #cecece;
+  height: 100%;
 }
 
-.image {
-	width: 100%;
-  height: 310px;
-	display: block;
-}
-
-.image:hover{
+.img {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-weight: bold;
+  font-size: 40px;
+  color: #fff;
   cursor: pointer;
-}
-
-.header {
-    height: 10px;
-    line-height: 10px;
-    text-align: center;
 }
 </style>
